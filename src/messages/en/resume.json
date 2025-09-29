@@ -1,0 +1,9 @@
+{
+  "template": "Template",
+  "card": "Card",
+  "templates": {
+    "standard": "Standard",
+    "minimal": "Minimal",
+    "classic": "Classic"
+  }
+}
