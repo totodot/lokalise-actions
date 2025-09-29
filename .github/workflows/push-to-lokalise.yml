@@ -1,0 +1,39 @@
+name: Push to Lokalise
+
+on:
+  push:
+    paths:
+      - 'src/messages/en/**'
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Push to Lokalise
+        uses: lokalise/lokalise-push-action@v3.5.0
+        with:
+          api_token: ${{ secrets.LOKALISE_API_TOKEN }}
+          project_id: ${{ vars.LOKALISE_PROJECT_ID }}
+          translations_path: |
+            src/messages
+          flat_naming: false
+          base_lang: en
+          file_format: json
+          additional_params: |
+            --convert-placeholders
+            --detect-icu-plurals
+
+      # - name: Send a Slack notification
+      #   uses: slackapi/slack-github-action@v2.1.0
+      #   with:
+      #     webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+      #     webhook-type: incoming-webhook
+      #     payload: |
+      #       text: "ResumeWise Frontend: New translations pushed to Lokalise :rocket:"
