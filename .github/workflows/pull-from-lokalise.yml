@@ -13,6 +13,7 @@ permissions:
 jobs:
   pull:
     runs-on: ubuntu-latest
+    environment: dev
 
     steps:
       - name: Checkout Repo
