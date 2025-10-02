@@ -1,3 +1,9 @@
 {
-  "template": "Template"
+    "card": "Tarjeta",
+    "template": "Plantilla",
+    "templates": {
+        "classic": "Clásico",
+        "minimal": "Mínimo",
+        "standard": "Estándar"
+    }
 }
