@@ -1,5 +1,9 @@
 {
     "welcome": "Welcome to the app",
     "hello": "Hello",
-    "test": "Test"
+    "test": "Test",
+    "test1": "{count, plural, one {# year} other {# years}}",
+    "nested": {
+        "nested1": "{count, plural, one {# month} other {# months}}"
+    }
 }
