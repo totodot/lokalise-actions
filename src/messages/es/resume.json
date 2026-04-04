@@ -3,7 +3,6 @@
     "template": "Plantilla",
     "templates": {
         "classic": "Clásico",
-        "minimal": "Mínimo",
-        "standard": "Estándar"
+        "minimal": "Mínimo"
     }
 }
